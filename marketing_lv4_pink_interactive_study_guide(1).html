@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Level 4 - You can do this Aphiwe! We love you.</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pinky: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            soft: '#fff5f7',
+                            hot: '#ff2a85',
+                            bubblegum: '#ff69b4',
+                            lavender: '#f3e8ff',
+                            blush: '#fbcfe8',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['Nunito', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #fff0f5;
+            background-image: radial-gradient(#fbcfe8 1.2px, transparent 1.2px);
+            background-size: 22px 22px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Mobile & Touch Optimizations */
+        .touch-card {
+            touch-action: manipulation;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .touch-card:active {
+            transform: scale(0.98);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .pink-gradient {
+            background: linear-gradient(135deg, #ff6584 0%, #ff8da1 50%, #ff7eb3 100%);
+        }
+
+        .card-gradient {
+            background: linear-gradient(180deg, #ffffff 0%, #fff3f6 100%);
+        }
+
+        .badge-pink {
+            background: linear-gradient(135deg, #f472b6 0%, #db2777 100%);
+        }
+
+        .shadow-cute {
+            box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.12), 0 8px 10px -6px rgba(244, 63, 94, 0.08);
+        }
+
+        .shadow-cute-hover:hover {
+            box-shadow: 0 18px 35px -5px rgba(244, 63, 94, 0.22), 0 10px 15px -5px rgba(244, 63, 94, 0.12);
+            transform: translateY(-3px);
+        }
+
+        /* Modal Overlay & Transitions */
+        .modal-backdrop {
+            background-color: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(6px);
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffe4e6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f472b6;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #db2777;
+        }
+
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                background-image: none !important;
+                color: black !important;
+            }
+            .card-gradient {
+                background: white !important;
+                border: 1px solid #fda4af !important;
+                box-shadow: none !important;
+            }
+            .modal-content-area {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen pb-16">
+
+    <!-- Top Floating Header & Nav -->
+    <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-2 border-pink-200 py-3 px-3 sm:px-4 shadow-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+            
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-2xl bg-pink-500 text-white flex-shrink-0 flex items-center justify-center text-xl shadow-md">
+                    💖
+                </div>
+                <div class="min-w-0">
+                    <h1 class="font-heading font-extrabold text-pink-700 text-base sm:text-lg md:text-xl tracking-wide leading-tight truncate">
+                        Marketing LV 4 -- You can do this Aphiwe! We love you.
+                    </h1>
+                    <p class="text-[10px] sm:text-[11px] text-pink-500 font-bold uppercase tracking-wider truncate">
+                        NCV Level 4 Interactive Revision Companion
+                    </p>
+                </div>
+            </div>
+
+            <!-- Global Search & Actions -->
+            <div class="flex items-center gap-2 w-full md:w-auto">
+                <div class="relative flex-1 md:w-72">
+                    <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search concepts, case studies..." 
+                        class="w-full pl-9 pr-4 py-2 rounded-full border-2 border-pink-300 focus:border-pink-500 focus:outline-none text-xs font-semibold bg-pink-50/60 transition-all placeholder-pink-400">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-pink-400 text-xs"></i>
+                </div>
+                
+                <button onclick="window.print()" class="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-bold px-3.5 py-2 rounded-full text-xs shadow-md transition-all flex items-center gap-1.5 shrink-0 active:scale-95">
+                    <i class="fa-solid fa-file-pdf text-sm"></i>
+                    <span class="hidden sm:inline">Print / PDF</span>
+                    <span class="sm:hidden">PDF</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Module Filter Pills -->
+        <div class="max-w-7xl mx-auto mt-2.5 pt-2 border-t border-pink-100 flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar -mx-3 px-3 sm:mx-0 sm:px-0">
+            <span class="text-[10px] sm:text-[11px] font-bold text-pink-500 uppercase mr-1 whitespace-nowrap shrink-0">Filter:</span>
+            <button onclick="filterModule('all')" class="mod-pill active-pill bg-pink-600 text-white px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap shadow-xs transition-all shrink-0">All Modules</button>
+            <button onclick="filterModule('mod1')" class="mod-pill bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all shrink-0">Mod 1: Research</button>
+            <button onclick="filterModule('mod2')" class="mod-pill bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all shrink-0">Mod 2: Data Flow</button>
+            <button onclick="filterModule('mod3')" class="mod-pill bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all shrink-0">Mod 3: Ethics & Policy</button>
+            <button onclick="filterModule('mod4')" class="mod-pill bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all shrink-0">Mod 4: Expertise & Costs</button>
+            <button onclick="filterModule('mod5')" class="mod-pill bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all shrink-0">Mod 5: Performance</button>
+            <button onclick="filterModule('mod6')" class="mod-pill bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all shrink-0">Mod 6: Sourcing Resources</button>
+            <button onclick="filterModule('mod7')" class="mod-pill bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all shrink-0">Mod 7: Strategy & Environment</button>
+            <button onclick="filterModule('mod8')" class="mod-pill bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1.5 sm:py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all shrink-0">Mod 8: International Trade</button>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="max-w-7xl mx-auto mt-6 px-4">
+        <div class="pink-gradient rounded-3xl p-6 md:p-10 text-white shadow-cute relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 opacity-20 text-9xl select-none">🌸</div>
+            <div class="absolute -left-8 -top-8 opacity-20 text-9xl select-none">✨</div>
+
+            <div class="relative z-10 max-w-3xl">
+                <span class="bg-white/20 backdrop-blur-md text-white font-extrabold text-xs uppercase px-4 py-1.5 rounded-full inline-flex items-center gap-2 mb-3 border border-white/30">
+                    <i class="fa-solid fa-heart text-pink-200"></i> Dedicated Study Hub for Aphiwe
+                </span>
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-3 drop-shadow-sm font-heading">
+                    Marketing Level 4 Interactive Master Hub
+                </h2>
+                <p class="text-pink-100 text-xs md:text-sm font-medium leading-relaxed mb-4">
+                    Click on <strong>ANY concept card</strong> below to unlock detailed textbook breakdowns, real South African case studies (Woolworths, Fidentia, Quickstop, Computicket, Discovery), formula guides, and exam tips!
+                </p>
+                <div class="flex flex-wrap gap-3 text-xs font-bold text-pink-700">
+                    <span class="bg-white/90 px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-book-open text-pink-500"></i> 8 Core Modules
+                    </span>
+                    <span class="bg-white/90 px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-pointer text-pink-500"></i> Interactive Pop-up Deep Dives
+                    </span>
+                    <span class="bg-white/90 px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-graduation-cap text-pink-500"></i> Exam Ready Notes
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 mt-8 space-y-12">
+
+        <!-- ================= MODULE 1 ================= -->
+        <section class="module-block card-gradient border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-cute transition-all" data-mod="mod1">
+            <div class="flex items-center gap-3 border-b-2 border-pink-200 pb-4 mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md">01</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-700 font-heading">Module 1: Managing Your Own Advertising Research Process</h2>
+                    <p class="text-xs text-pink-500 font-bold">Research Planning, Pre/Post Testing, Data Types, Life Cycles & RFP Management</p>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-2xl p-5 border border-pink-200 mb-6 shadow-xs">
+                <h3 class="font-heading text-pink-600 font-bold mb-2 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-pink-400"></i> Module Overview
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium">
+                    Advertising research is specialized and complex. Organizations conduct research to determine optimal promotional strategies, evaluate campaign effectiveness across media channels (TV, radio, social media, outdoor, print), and track brand health throughout the <strong>Product Life Cycle</strong> (Introduction, Growth, Maturity, Decline).
+                </p>
+            </div>
+
+            <h3 class="font-heading text-sm uppercase tracking-wider text-pink-600 font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-pink-500"></i> Click Any Card Below To Open Full Detail:
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Card: Advertising Campaign -->
+                <div onclick="openModal('mod1_1')" class="concept-card touch-card bg-white p-4 sm:p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Advertising Campaign</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Key Concept</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        A structured advertising plan consisting of a coordinated series of advertisements appearing across multiple media platforms...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Pre-Testing -->
+                <div onclick="openModal('mod1_2')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Pre-Testing (Copy Testing)</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Research Method</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Research conducted BEFORE an ad is officially launched to predict consumer reaction, clarity, and overall appeal...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Post-Testing -->
+                <div onclick="openModal('mod1_3')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Post-Testing (Tracking)</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Evaluation</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Research carried out AFTER campaign launch to measure recall, attitude shifts, brand awareness, and ROI...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Customised vs Syndicated -->
+                <div onclick="openModal('mod1_4')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Customised vs Syndicated Data</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Data Ownership</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Tailored proprietary studies created for one specific client versus shared industry data sold to multiple buyers...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Primary vs Secondary Research -->
+                <div onclick="openModal('mod1_5')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Primary vs Secondary Data</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Data Collection</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        First-hand data collection tailored to a current problem versus using pre-existing statistics and published reports...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Tender & Request for Proposal -->
+                <div onclick="openModal('mod1_6')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Tender / RFP & Contingency</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Procurement</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Formal proposals by research suppliers outlining methodologies, timelines, and costs, backed by backup contingency plans...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MODULE 2 ================= -->
+        <section class="module-block card-gradient border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-cute transition-all" data-mod="mod2">
+            <div class="flex items-center gap-3 border-b-2 border-pink-200 pb-4 mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md">02</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-700 font-heading">Module 2: Flow and Processing of Marketing Data</h2>
+                    <p class="text-xs text-pink-500 font-bold">Stakeholders, Consultation, MIS/DSS Systems & 8 Success Factors</p>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-2xl p-5 border border-pink-200 mb-6 shadow-xs">
+                <h3 class="font-heading text-pink-600 font-bold mb-2 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-pink-400"></i> Module Overview
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium">
+                    Effective decision-making depends on reliable data flow. This module details stakeholder consultations, internal vs external data touchpoints, computerized Marketing Information Systems (MIS), Decision Support Systems (DSS), statistical modeling, and 8 quality success standards for data.
+                </p>
+            </div>
+
+            <h3 class="font-heading text-sm uppercase tracking-wider text-pink-600 font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-pink-500"></i> Click Any Card Below To Open Full Detail:
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Card: Stakeholders & Consultation -->
+                <div onclick="openModal('mod2_1')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Stakeholders & Consultation</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Core Concept</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Internal and external parties connected to an organization, engaged through 2-way consultation to determine information needs...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: MIS vs DSS Systems -->
+                <div onclick="openModal('mod2_2')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">MIS & DSS Systems</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Technology</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Computerized frameworks storing continuous marketing data (MIS) and interactive "what-if" decision tools (DSS)...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: 8 Success Factors for Data Flow -->
+                <div onclick="openModal('mod2_3')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">8 Quality Data Factors</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Quality Control</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Data must be Complete, Relevant, Accurate, Current, Valid, Authentic/Credible, Sufficient, and in the Required Form...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Internal & External Data Resources -->
+                <div onclick="openModal('mod2_4')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Data Touchpoints & Sources</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Data Flow</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Capturing internal sales, accounts, customer service logs alongside external media, trade association, and competitor statistics...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MODULE 3 ================= -->
+        <section class="module-block card-gradient border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-cute transition-all" data-mod="mod3">
+            <div class="flex items-center gap-3 border-b-2 border-pink-200 pb-4 mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md">03</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-700 font-heading">Module 3: Marketing Policy and Plan Compliance</h2>
+                    <p class="text-xs text-pink-500 font-bold">Ethics, CSR, Case Studies (Woolworths, Fidentia, Quickstop), 4 Ps & Legislation</p>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-2xl p-5 border border-pink-200 mb-6 shadow-xs">
+                <h3 class="font-heading text-pink-600 font-bold mb-2 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-pink-400"></i> Module Overview
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium">
+                    Marketing strategies must strictly adhere to South African laws (Constitution, Consumer Protection Act) and organizational ethics. This module explores Corporate Social Responsibility (CSR), ethical application across the 4 Ps, and real-world compliance case studies.
+                </p>
+            </div>
+
+            <h3 class="font-heading text-sm uppercase tracking-wider text-pink-600 font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-pink-500"></i> Click Any Card Below To Open Full Detail:
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Card: Ethics & Organisational Ethics -->
+                <div onclick="openModal('mod3_1')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Ethics & Code of Conduct</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Moral Baseline</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Personal ethics vs formal organizational code of ethics that dictates acceptable employee behavior and customer treatment...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: CSR & SA Case Studies -->
+                <div onclick="openModal('mod3_2')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">CSR & Woolworths Case Study</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Community & Eco</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Corporate Social Responsibility initiatives (Discovery Walk the Talk, Woolworths topsoil recycling, water saving & frog preservation)...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Ethical 4 Ps & Quickstop Case Study -->
+                <div onclick="openModal('mod3_3')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Ethical 4 Ps (Quickstop Case)</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Marketing Mix Ethics</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Applying ethics across Product, Price, Place, and Promotion, illustrated by Quickstop retail store decisions...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Unethical Marketing & Fidentia Scandal -->
+                <div onclick="openModal('mod3_4')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Scandals: Fidentia & FunTimes</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Legal Risks</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Analyzing consequences of contravening ethics: FunTimes youth alcohol ads and the R1 billion Fidentia trust fund collapse...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Policy vs Plan Comparison -->
+                <div onclick="openModal('mod3_5')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Marketing Policy vs Plan</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Strategic Grid</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Comparative analysis of long-term overarching corporate policy versus 12-month brand specific marketing plans...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MODULE 4 ================= -->
+        <section class="module-block card-gradient border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-cute transition-all" data-mod="mod4">
+            <div class="flex items-center gap-3 border-b-2 border-pink-200 pb-4 mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md">04</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-700 font-heading">Module 4: Expertise and Resources Within a Marketing Plan</h2>
+                    <p class="text-xs text-pink-500 font-bold">Competencies vs Attributes, Budgeting Methods, Custodians & Infrastructure</p>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-2xl p-5 border border-pink-200 mb-6 shadow-xs">
+                <h3 class="font-heading text-pink-600 font-bold mb-2 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-pink-400"></i> Module Overview
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium">
+                    Executing a marketing plan requires calculating both human expertise and operational infrastructure costs. Learn how to profile staff competencies vs personal attributes, calculate financial estimates using 5 budgeting methods, and secure sign-offs from authorized custodians.
+                </p>
+            </div>
+
+            <h3 class="font-heading text-sm uppercase tracking-wider text-pink-600 font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-pink-500"></i> Click Any Card Below To Open Full Detail:
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Card: Competencies vs Attributes -->
+                <div onclick="openModal('mod4_1')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Competencies vs Attributes</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">HR Profiling</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Learnable technical skills (budgeting, negotiating) vs inherent personal character traits (reliability, enthusiasm)...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: 5 Budgeting Methods -->
+                <div onclick="openModal('mod4_2')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">5 Budgeting Methods</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Finance & Costs</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Detailed analysis of Objective & Task, % of Sales, Competitive Parity, Last Year + Bit, and Affordable methods...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Infrastructure & Custodians -->
+                <div onclick="openModal('mod4_3')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Custodians & Governance</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Resource Control</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Roles of Plan Custodians, Key Authorised Persons, internal marketing, and communication checklist procedures...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MODULE 5 ================= -->
+        <section class="module-block card-gradient border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-cute transition-all" data-mod="mod5">
+            <div class="flex items-center gap-3 border-b-2 border-pink-200 pb-4 mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md">05</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-700 font-heading">Module 5: Marketing Performance and Objectives</h2>
+                    <p class="text-xs text-pink-500 font-bold">Strategic Master Plans, Vision/Mission, 4 Control Standards & Deviation Cycles</p>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-2xl p-5 border border-pink-200 mb-6 shadow-xs">
+                <h3 class="font-heading text-pink-600 font-bold mb-2 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-pink-400"></i> Module Overview
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium">
+                    Marketing efforts must directly fuel top-level corporate goals. This module outlines how marketing shapes 3-5 year Strategic Business Plans, establishes measurable benchmarks across Profit, Market Share, Productivity, and Staff Development, and manages time-bound remedial cycles.
+                </p>
+            </div>
+
+            <h3 class="font-heading text-sm uppercase tracking-wider text-pink-600 font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-pink-500"></i> Click Any Card Below To Open Full Detail:
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Card: Strategic Business Plan & Vision/Mission -->
+                <div onclick="openModal('mod5_1')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Strategic Business Plan</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Master Strategy</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Long-term enterprise goals supported by forward-looking Vision and current purpose Mission statements...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: 4 Core Performance Standards -->
+                <div onclick="openModal('mod5_2')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">4 Control Performance Standards</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Benchmarks</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Measuring operational targets across Profit, Market Share, Productivity, and Staff Training & Development...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Deviations & Corrective Action Cycle -->
+                <div onclick="openModal('mod5_3')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Deviations & Control Cycle</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Remedial Action</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Identifying performance gaps between target and actual results, followed by fast corrective action implementation...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MODULE 6 ================= -->
+        <section class="module-block card-gradient border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-cute transition-all" data-mod="mod6">
+            <div class="flex items-center gap-3 border-b-2 border-pink-200 pb-4 mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md">06</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-700 font-heading">Module 6: Marketing Resources to Meet Objectives</h2>
+                    <p class="text-xs text-pink-500 font-bold">Resource Allocation, Intellectual Capital & Accounting Practices</p>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-2xl p-5 border border-pink-200 mb-6 shadow-xs">
+                <h3 class="font-heading text-pink-600 font-bold mb-2 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-pink-400"></i> Module Overview
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium">
+                    This module provides guidelines for identifying, acquiring, aligning, and accounting for human, financial, technological, and organizational resources. It highlights accounting templates, hard copy vs soft copy storage, and LAN infrastructure.
+                </p>
+            </div>
+
+            <h3 class="font-heading text-sm uppercase tracking-wider text-pink-600 font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-pink-500"></i> Click Any Card Below To Open Full Detail:
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Card: 4 Resource Categories -->
+                <div onclick="openModal('mod6_1')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">4 Resource Categories</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Asset Classes</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Categorizing Human (and Intellectual Capital), Financial, Technological, and Organisational assets...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Sourcing & Resource Alignment -->
+                <div onclick="openModal('mod6_2')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Resource Alignment & Sourcing</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Optimization</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        In-house vs consultancy sourcing, matching staff skills directly to campaign roles to avoid wasteful drift...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Accounting & Storage (LAN/Hard Copy) -->
+                <div onclick="openModal('mod6_3')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Accounting & Resource Files</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Record Keeping</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Managing resource checklists, hard copy printouts vs soft copy databases, local area networks (LAN), and language barriers...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MODULE 7 ================= -->
+        <section class="module-block card-gradient border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-cute transition-all" data-mod="mod7">
+            <div class="flex items-center gap-3 border-b-2 border-pink-200 pb-4 mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md">07</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-700 font-heading">Module 7: Develop and Manage Marketing Plans and Strategies</h2>
+                    <p class="text-xs text-pink-500 font-bold">Micro/Market/Macro Environments, 6 Market Steps & Computicket Case Study</p>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-2xl p-5 border border-pink-200 mb-6 shadow-xs">
+                <h3 class="font-heading text-pink-600 font-bold mb-2 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-pink-400"></i> Module Overview
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium">
+                    Designing successful strategies requires analyzing the multi-layered environment. Learn to separate internal micro factors from market forces and macro trends (PESTLE), standardizing market research through 6 systematic steps.
+                </p>
+            </div>
+
+            <h3 class="font-heading text-sm uppercase tracking-wider text-pink-600 font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-pink-500"></i> Click Any Card Below To Open Full Detail:
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Card: 3 Layers of Marketing Environment -->
+                <div onclick="openModal('mod7_1')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Micro, Market & Macro</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Environment Analysis</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Internal controllable elements vs immediate industry forces vs broad PESTLE macro-environmental trends...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: 6 Steps in Market Analysis -->
+                <div onclick="openModal('mod7_2')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">6 Market Analysis Steps</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Research Methodology</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Sequential process: 1. Define Problem, 2. Analyse Situation, 3. Gather Data, 4. Interpret, 5. Solve, 6. Design Plan...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Key Success Factors & Computicket -->
+                <div onclick="openModal('mod7_3')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Key Success Factors (Computicket)</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Competitive Edge</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Core assets and unique skills that grant market dominance, exemplified by Computicket's ticketing platform...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MODULE 8 ================= -->
+        <section class="module-block card-gradient border-2 border-pink-200 rounded-3xl p-6 md:p-8 shadow-cute transition-all" data-mod="mod8">
+            <div class="flex items-center gap-3 border-b-2 border-pink-200 pb-4 mb-6">
+                <span class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center font-heading font-extrabold text-xl shadow-md">08</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-pink-700 font-heading">Module 8: International Trade and Marketing</h2>
+                    <p class="text-xs text-pink-500 font-bold">Global Expansion, Generic Strategies, Matrix Grid & Entry Modes</p>
+                </div>
+            </div>
+
+            <div class="bg-white/90 rounded-2xl p-5 border border-pink-200 mb-6 shadow-xs">
+                <h3 class="font-heading text-pink-600 font-bold mb-2 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-lightbulb text-pink-400"></i> Module Overview
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed font-medium">
+                    Expanding across borders requires selecting generic competitive strategies, assessing market attractiveness vs internal strength, mastering modes of entry (Licensing, Joint Ventures, FDI), and navigating cultural and trade policy factors.
+                </p>
+            </div>
+
+            <h3 class="font-heading text-sm uppercase tracking-wider text-pink-600 font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer text-pink-500"></i> Click Any Card Below To Open Full Detail:
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Card: Generic Competitive Strategies -->
+                <div onclick="openModal('mod8_1')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Generic Competitive Strategies</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Global Strategy</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Selecting Cost Leadership, Differentiation, or Focus Niche strategy for international advantage...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Survival & Growth Decisions -->
+                <div onclick="openModal('mod8_2')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Survival & Growth Decisions</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Strategic Direction</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Choosing whether to Penetrate, Maintain, Harvest, or Divest business units in international markets...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Card: Attractiveness Matrix & Entry Modes -->
+                <div onclick="openModal('mod8_3')" class="concept-card bg-white p-5 rounded-2xl border-2 border-pink-200 shadow-xs shadow-cute-hover cursor-pointer transition-all hover:border-pink-400 group">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-pink-700 text-base group-hover:text-pink-600 transition-colors">Attractiveness Grid & Entry Modes</h4>
+                        <span class="badge-pink text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold">Market Expansion</span>
+                    </div>
+                    <p class="text-xs text-slate-600 line-clamp-3 mb-3">
+                        Evaluating foreign market attractiveness grid vs Company Strength, and choosing entry modes (Licensing, JV, FDI)...
+                    </p>
+                    <div class="text-[11px] font-bold text-pink-500 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span>Read full concept details</span> <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Modal Backdrop & Content -->
+    <div id="detailModal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-t-3xl sm:rounded-3xl max-w-3xl w-full border-t-4 sm:border-4 border-pink-300 shadow-2xl overflow-hidden transform transition-all max-h-[92vh] sm:max-h-[90vh] flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="pink-gradient p-4 sm:p-5 text-white flex justify-between items-center relative">
+                <div class="pr-6">
+                    <span id="modalCategory" class="bg-white/20 backdrop-blur-md text-white font-bold text-[9px] sm:text-[10px] uppercase px-2.5 py-0.5 rounded-full border border-white/30">
+                        Module Category
+                    </span>
+                    <h3 id="modalTitle" class="text-xl sm:text-2xl font-extrabold mt-1 font-heading tracking-wide leading-tight">
+                        Concept Title
+                    </h3>
+                </div>
+                <button onclick="closeModal()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/20 hover:bg-white/30 active:scale-90 text-white flex items-center justify-center text-lg sm:text-xl transition-all shrink-0">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="p-4 sm:p-6 overflow-y-auto space-y-4 sm:space-y-6 text-slate-700 text-xs sm:text-sm leading-relaxed" id="modalBody">
+                <!-- Dynamic Content Injected via JS -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-pink-50 border-t border-pink-200 p-3.5 sm:p-4 flex justify-between items-center no-print">
+                <span class="text-[10px] sm:text-[11px] text-pink-600 font-bold flex items-center gap-1">
+                    💖 Keep going Aphiwe!
+                </span>
+                <button onclick="closeModal()" class="bg-pink-500 hover:bg-pink-600 active:scale-95 text-white font-bold px-4 sm:px-5 py-2 rounded-full text-xs transition-all shadow-md">
+                    Got it! Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-4 mt-12 text-center text-xs text-pink-500 font-semibold no-print">
+        <p class="bg-white/80 backdrop-blur-md py-4 rounded-2xl border border-pink-200 shadow-sm">
+            ✨ Created specifically for Aphiwe • Marketing Level 4 Revision Guide • Click any card for detailed notes! 💖
+        </p>
+    </footer>
+
+    <script>
+        // Detailed Data Store containing comprehensive textbook information for each topic
+        const conceptData = {
+            'mod1_1': {
+                category: 'Module 1: Advertising Research',
+                title: 'Advertising Campaign',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Comprehensive Textbook Definition</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                An <strong>Advertising Campaign</strong> is a planned, highly structured series of coordinated advertisements appearing across multiple media channels (such as television, radio, social media platforms, billboards, and newspapers) over a specific time frame to achieve defined marketing communication goals.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-pink-700 text-sm mb-2"><i class="fa-solid fa-list-check text-pink-500 mr-1"></i> Core Objectives of an Ad Campaign:</h4>
+                            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+                                <li><strong>Brand Awareness:</strong> Introducing a new product or service to target buyers.</li>
+                                <li><strong>Sales Penetration:</strong> Encouraging existing customers to buy more frequently.</li>
+                                <li><strong>Market Positioning:</strong> Differentiating the brand from aggressive competitors.</li>
+                                <li><strong>Educational Messaging:</strong> Explaining unique product features or health benefits to consumers.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                            <h4 class="font-bold text-slate-800 text-sm mb-1"><i class="fa-solid fa-earth-africa text-pink-500 mr-1"></i> Real-World Example (South Africa)</h4>
+                            <p class="text-slate-600">
+                                When <strong>Nando's</strong> launches a new flavor or meal deal, they run an advertising campaign across TV ads, radio spots, viral TikTok videos, and outdoor billboards simultaneously so consumers hear the message wherever they go.
+                            </p>
+                        </div>
+
+                        <div class="bg-pink-100/50 p-3 rounded-xl border border-pink-200 text-pink-800 font-semibold text-xs">
+                            💡 <strong>Exam Tip:</strong> Always remember that an ad campaign is NOT just a single advert; it is a <em>coordinated series</em> across time and media!
+                        </div>
+                    </div>
+                `
+            },
+            'mod1_2': {
+                category: 'Module 1: Advertising Research',
+                title: 'Pre-Testing (Copy Testing)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Detailed Explanation</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                <strong>Pre-Testing</strong> (also known as copy testing) is research conducted <em>before</em> an advertisement is publicly aired or printed. It evaluates consumer reactions to draft artwork, scripts, slogans, and messaging to identify mistakes before allocating thousands or millions of rands to media placement.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-pink-700 text-sm mb-2"><i class="fa-solid fa-microscope text-pink-500 mr-1"></i> Common Pre-Testing Methods:</h4>
+                            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+                                <li><strong>Focus Group Discussions:</strong> Small groups of target consumers evaluate ad storyboards.</li>
+                                <li><strong>Consumer Jury Ratings:</strong> Panelists rank several alternative ad concepts.</li>
+                                <li><strong>Portfolio Tests:</strong> Mock-up magazines containing test ads are shown to evaluate message recall.</li>
+                                <li><strong>Physiological Tests:</strong> Eye-tracking or heart-rate sensors to measure visual engagement.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-pink-100/50 p-3 rounded-xl border border-pink-200 text-pink-800 font-semibold text-xs">
+                            💡 <strong>Key Advantage:</strong> Prevents costly advertising blunders and ensures target audience alignment prior to launch!
+                        </div>
+                    </div>
+                `
+            },
+            'mod1_3': {
+                category: 'Module 1: Advertising Research',
+                title: 'Post-Testing (Advertising Tracking)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Detailed Explanation</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                <strong>Post-Testing</strong> takes place <em>after</em> an advertising campaign has been launched. It measures how effectively the campaign achieved its objectives by analyzing consumer memory, attitude shifts, brand preference, and overall Return on Investment (ROI).
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-pink-700 text-sm mb-2"><i class="fa-solid fa-chart-line text-pink-500 mr-1"></i> Post-Testing Metrics evaluated:</h4>
+                            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+                                <li><strong>Unaided Recall:</strong> Asking consumers to name ads they saw recently without hints.</li>
+                                <li><strong>Aided Recognition:</strong> Showing brand logos or clips to check if consumers recognize the ad.</li>
+                                <li><strong>Attitude Change:</strong> Surveys determining if consumers view the brand more favorably.</li>
+                                <li><strong>Sales Performance:</strong> Comparing sales figures before and after the campaign.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'mod1_4': {
+                category: 'Module 1: Advertising Research',
+                title: 'Customised vs Syndicated Advertising Research',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Comparative Analysis</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Marketing departments can obtain research through tailored client-owned projects or shared industry research reports.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="bg-white p-3.5 rounded-xl border border-pink-300">
+                                <h5 class="font-bold text-pink-600 mb-1">Customised Research</h5>
+                                <p class="text-xs text-slate-600">Commissioned by a single client for their unique marketing problem. The findings belong exclusively to that client (proprietary).</p>
+                                <p class="text-[11px] text-pink-500 font-bold mt-2">Example: Woolworths commissioning research for a new organic range.</p>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-pink-300">
+                                <h5 class="font-bold text-pink-600 mb-1">Syndicated Research</h5>
+                                <p class="text-xs text-slate-600">Independent research agencies collect standard data and sell the reports to multiple competing companies in an industry.</p>
+                                <p class="text-[11px] text-pink-500 font-bold mt-2">Example: General bread purchasing habits in South Africa sold to Albany, Blue Ribbon, and Sasko.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod1_5': {
+                category: 'Module 1: Advertising Research',
+                title: 'Primary vs Secondary Advertising Research',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Detailed Explanation</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Primary data is original data gathered first-hand for the specific research problem at hand, while secondary data is existing information previously published for other purposes.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Primary Methods:</strong> Focus groups, customer surveys, direct observation, in-depth interviews. High relevance but higher cost and time.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Secondary Sources:</strong> Government census figures (Stats SA), academic journals, industry magazines, financial reports. Quick and cheap, but may be outdated.
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod1_6': {
+                category: 'Module 1: Advertising Research',
+                title: 'Tenders, RFPs & Contingency Planning',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Procurement & Risk Management</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                When outsourcing research, companies issue a <strong>Request for Proposal (RFP)</strong> or tender brief outlining project needs. Agencies submit competitive bids detailing cost, timelines, and research methods.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                            <h4 class="font-bold text-slate-800 text-sm mb-1"><i class="fa-solid fa-shield-halved text-pink-500 mr-1"></i> Contingency Planning in Research</h4>
+                            <p class="text-slate-600">
+                                Contingency plans are alternative action strategies prepared in advance to manage unexpected delays, budget overruns, weather interruptions during field surveys, or agency failures.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            'mod2_1': {
+                category: 'Module 2: Flow of Data',
+                title: 'Stakeholders & Consultation',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Textbook Core Concept</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                <strong>Stakeholders</strong> are individuals or groups who have a direct interest in or connection with an organization. Effective data management relies on two-way <strong>Consultation</strong> to determine what specific information each stakeholder requires to make sound decisions.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="bg-white p-3.5 rounded-xl border border-pink-200">
+                                <h5 class="font-bold text-pink-600 mb-1">Internal Stakeholders</h5>
+                                <ul class="list-disc pl-4 text-xs text-slate-600 space-y-1">
+                                    <li><strong>Owners & Directors:</strong> Need financial ROI & expansion figures.</li>
+                                    <li><strong>Marketing Managers:</strong> Need sales trends & ad performance data.</li>
+                                    <li><strong>Sales Representatives:</strong> Need stock availability & customer details.</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-pink-200">
+                                <h5 class="font-bold text-pink-600 mb-1">External Stakeholders</h5>
+                                <ul class="list-disc pl-4 text-xs text-slate-600 space-y-1">
+                                    <li><strong>Customers:</strong> Need product safety, prices & warranty terms.</li>
+                                    <li><strong>Suppliers:</strong> Need raw material order forecasts.</li>
+                                    <li><strong>Community & Govt:</strong> Need pollution & employment compliance reports.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod2_2': {
+                category: 'Module 2: Flow of Data',
+                title: 'Marketing Information Systems (MIS) & DSS',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Information Technology Architecture</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Organizations use computerized systems to ensure continuous flow, processing, and retrieval of operational and market data.
+                            </p>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="bg-white p-4 rounded-xl border border-pink-300">
+                                <h5 class="font-bold text-pink-600 text-sm mb-1">Marketing Information System (MIS)</h5>
+                                <p class="text-xs text-slate-600">A computerized method to regularly gather, sort, analyze, store, and distribute accurate, up-to-date marketing information to decision-makers. MIS servers run continuously in the background.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-pink-300">
+                                <h5 class="font-bold text-pink-600 text-sm mb-1">Decision Support System (DSS)</h5>
+                                <p class="text-xs text-slate-600">An interactive software application built into an MIS that allows decision-makers to manipulate data, run statistical models, and test <strong>"what-if" scenarios</strong> (e.g., predicting sales if bread prices increase by R2.00).</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod2_3': {
+                category: 'Module 2: Flow of Data',
+                title: '8 Critical Success Factors for Data Flow',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Data Quality Control Standards</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                To be effective for decision-making, information flowing through an organization must satisfy <strong>8 Quality Standards</strong>:
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+                            <div class="bg-white p-2.5 rounded-xl border border-pink-200 font-bold text-pink-700 text-center">1. Complete</div>
+                            <div class="bg-white p-2.5 rounded-xl border border-pink-200 font-bold text-pink-700 text-center">2. Relevant</div>
+                            <div class="bg-white p-2.5 rounded-xl border border-pink-200 font-bold text-pink-700 text-center">3. Accurate</div>
+                            <div class="bg-white p-2.5 rounded-xl border border-pink-200 font-bold text-pink-700 text-center">4. Current</div>
+                            <div class="bg-white p-2.5 rounded-xl border border-pink-200 font-bold text-pink-700 text-center">5. Valid</div>
+                            <div class="bg-white p-2.5 rounded-xl border border-pink-200 font-bold text-pink-700 text-center">6. Credible</div>
+                            <div class="bg-white p-2.5 rounded-xl border border-pink-200 font-bold text-pink-700 text-center">7. Sufficient</div>
+                            <div class="bg-white p-2.5 rounded-xl border border-pink-200 font-bold text-pink-700 text-center">8. Required Form</div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod2_4': {
+                category: 'Module 2: Flow of Data',
+                title: 'Internal Data Touchpoints & Remedial Action Plans',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Internal Data Sources & Problem Fixing</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Internal data comes from every company department: Accounts (profit margins, sales figures), Operations (inventory, dispatch), Promotions (ad results), and Customer Service (complaints).
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                            <h5 class="font-bold text-slate-800 text-xs mb-1">Remedial Action Plans for Data Breakdown:</h5>
+                            <p class="text-xs text-slate-600">If data is received late, inaccurate, or in the wrong format, managers must implement remedial action plans—such as upgrading IT software, retraining staff, or establishing daily reporting deadlines.</p>
+                        </div>
+                    </div>
+                `
+            },
+            'mod3_1': {
+                category: 'Module 3: Ethics & Compliance',
+                title: 'Ethics & Organisational Ethics',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Ethical Foundations</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                <strong>Ethics</strong> represent the moral principles regarding right and wrong behavior. <strong>Personal Ethics</strong> are an individual's private values, whereas <strong>Organisational Ethics</strong> are formal rules and standards adopted by a business (found in a formal <strong>Code of Ethics</strong>).
+                            </p>
+                        </div>
+
+                        <div class="bg-pink-100/50 p-3 rounded-xl border border-pink-200 text-pink-800 font-semibold text-xs">
+                            💡 <strong>Key Rule:</strong> Organisational ethics must always comply with the <strong>South African Constitution</strong> and statutory law (e.g., Consumer Protection Act).
+                        </div>
+                    </div>
+                `
+            },
+            'mod3_2': {
+                category: 'Module 3: Ethics & Compliance',
+                title: 'Corporate Social Responsibility (CSR) & SA Case Studies',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Definition of CSR</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                <strong>Corporate Social Responsibility (CSR)</strong> consists of voluntary goodwill initiatives undertaken by an enterprise to benefit society, communities, or the environment without demanding immediate commercial returns.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="bg-white p-3.5 rounded-xl border border-pink-200">
+                                <h5 class="font-bold text-pink-600 text-xs mb-1">Woolworths Eco Initiative Case Study</h5>
+                                <p class="text-xs text-slate-600">Woolworths recycled topsoil during construction, installed rainwater harvesting boreholes, used automatic dimming lights, and preserved natural pond habitats for African bullfrogs.</p>
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-pink-200">
+                                <h5 class="font-bold text-pink-600 text-xs mb-1">Discovery & Talk Radio 702 Case Study</h5>
+                                <p class="text-xs text-slate-600">Sponsoring the <em>Walk the Talk</em> event to promote health, wellness, and raise funds for community development initiatives.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod3_3': {
+                category: 'Module 3: Ethics & Compliance',
+                title: 'Ethical Application across the 4 Ps (Quickstop Case Study)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Applying Ethics to the Marketing Mix</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Organisational ethics must guide every single element of the 4 Ps (Product, Price, Place, Promotion).
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-2xl border border-pink-300 space-y-2 text-xs">
+                            <h5 class="font-bold text-pink-700 text-sm border-b border-pink-100 pb-1">Case Study: Quickstop Retail Policy</h5>
+                            <p><strong>Product:</strong> Refusing to sell dangerous items (toys with lead paint) or expired milk.</p>
+                            <p><strong>Price:</strong> Refusing price gouging (never charging more than double cost) and maintaining equal pricing across all stores.</p>
+                            <p><strong>Place:</strong> Servicing delivery trucks regularly so they do not produce air or noise pollution in residential areas.</p>
+                            <p><strong>Promotion:</strong> Avoiding deceptive advertising (e.g., claiming diet pills produce instant weight loss) or racially insensitive beauty ads.</p>
+                        </div>
+                    </div>
+                `
+            },
+            'mod3_4': {
+                category: 'Module 3: Ethics & Compliance',
+                title: 'Unethical Marketing Scandals: Fidentia & FunTimes',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Consequences of Unethical Marketing</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Breaching ethics leads to severe legal penalties, ruined reputation, lost customer trust, and financial collapse.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                                <h5 class="font-bold text-slate-800 text-xs mb-1">Fidentia Scandal Case Study</h5>
+                                <p class="text-xs text-slate-600">Fidentia Asset Management collapsed after directors misappropriated over R1 billion in funds meant for 40 000 mineworkers' widows and orphans (Living Hands Trust).</p>
+                            </div>
+                            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                                <h5 class="font-bold text-slate-800 text-xs mb-1">FunTimes Beverage Case Study</h5>
+                                <p class="text-xs text-slate-600">FunTimes promoted alcoholic drinks using adverts depicting young youth near high schools—a clear breach of advertising codes and social ethics.</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod3_5': {
+                category: 'Module 3: Ethics & Compliance',
+                title: 'Marketing Policy vs Marketing Plan',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Comparative Framework</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Understanding the core differences and similarities between corporate marketing policy and brand plans.
+                            </p>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs border-collapse border border-pink-200">
+                                <thead>
+                                    <tr class="bg-pink-100 text-pink-800">
+                                        <th class="p-2 border border-pink-200">Feature</th>
+                                        <th class="p-2 border border-pink-200">Marketing Policy</th>
+                                        <th class="p-2 border border-pink-200">Marketing Plan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="p-2 border border-pink-200 font-bold">Scope</td>
+                                        <td class="p-2 border border-pink-200">Entire organization</td>
+                                        <td class="p-2 border border-pink-200">Specific product or brand</td>
+                                    </tr>
+                                    <tr class="bg-pink-50/50">
+                                        <td class="p-2 border border-pink-200 font-bold">Timeframe</td>
+                                        <td class="p-2 border border-pink-200">Long-term document</td>
+                                        <td class="p-2 border border-pink-200">Short-term (up to 12 months)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 border border-pink-200 font-bold">Focus</td>
+                                        <td class="p-2 border border-pink-200">General ethical guidelines</td>
+                                        <td class="p-2 border border-pink-200">Specific campaign actions & budgets</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `
+            },
+            'mod4_1': {
+                category: 'Module 4: Expertise & Resources',
+                title: 'Competencies vs Attributes (Staff Profiling)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Human Resource Profiling</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Executing a plan requires selecting staff based on technical abilities (competencies) and personal character (attributes).
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                            <div class="bg-white p-3.5 rounded-xl border border-pink-200">
+                                <h5 class="font-bold text-pink-600 mb-1">Competencies (Skills)</h5>
+                                <p class="text-slate-600 mb-2">Learnable, practical abilities and knowledge required to perform job tasks.</p>
+                                <span class="text-pink-500 font-bold">Examples:</span> Planning, negotiating, financial analysis, presentation skills, media buying.
+                            </div>
+                            <div class="bg-white p-3.5 rounded-xl border border-pink-200">
+                                <h5 class="font-bold text-pink-600 mb-1">Attributes (Qualities)</h5>
+                                <p class="text-slate-600 mb-2">Inherent character traits and attitudes possessed by individuals.</p>
+                                <span class="text-pink-500 font-bold">Examples:</span> Reliability, confidence, enthusiasm, attention to detail, persistence.
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod4_2': {
+                category: 'Module 4: Expertise & Resources',
+                title: '5 Budgeting Methods for Marketing Plans',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Financial Estimation Techniques</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Calculating marketing budgets using 5 standard industry methods:
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>1. Objective & Task Method:</strong> Calculates exact costs for every planned activity. (Most accurate & recommended).</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>2. Percentage of Sales:</strong> Budget set as a fixed % of projected sales revenue.</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>3. Competitive Parity:</strong> Matching competitors' estimated spending.</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>4. Last Year's Budget + %:</strong> Reusing previous year's budget adjusted for inflation.</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>5. Affordable Method:</strong> Allocating whatever spare money remains after operational costs.</div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod4_3': {
+                category: 'Module 4: Expertise & Resources',
+                title: 'Custodians, Authorizations & Infrastructure',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Governance & Facilities</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                The <strong>Plan Custodian</strong> (Marketing Manager) holds overall responsibility for plan implementation. Financial resource requests must be signed off by <strong>Key Authorised Persons</strong> (Heads of Department/Finance Directors).
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs">
+                            <h5 class="font-bold text-slate-800 mb-1">Infrastructure Requirements:</h5>
+                            <p class="text-slate-600">Includes physical buildings, delivery fleets, computers, design software, and database servers needed to run marketing operations smoothly.</p>
+                        </div>
+                    </div>
+                `
+            },
+            'mod5_1': {
+                category: 'Module 5: Performance & Objectives',
+                title: 'Strategic Business Plan, Vision & Mission',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Strategic Hierarchy</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Marketing plans derive directly from top-level corporate strategy.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Strategic Business Plan:</strong> A 3-5 year master plan establishing growth, market share, and revenue targets.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Vision Statement:</strong> Forward-looking aspiration defining what the enterprise aims to become.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Mission Statement:</strong> Concise declaration of present business purpose, products, and target market.
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod5_2': {
+                category: 'Module 5: Performance & Objectives',
+                title: '4 Core Performance Standards',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Performance Benchmarks</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Measurable control standards used to evaluate operational success across 4 key areas:
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                            <div class="bg-white p-3 rounded-xl border border-pink-200"><strong>1. Profit Standards:</strong> Monetary earnings and profit margins targeted over a defined period.</div>
+                            <div class="bg-white p-3 rounded-xl border border-pink-200"><strong>2. Market Share Standards:</strong> Targeted percentage of total category sales controlled.</div>
+                            <div class="bg-white p-3 rounded-xl border border-pink-200"><strong>3. Productivity Standards:</strong> Efficiency ratios measuring output generated per input cost.</div>
+                            <div class="bg-white p-3 rounded-xl border border-pink-200"><strong>4. Staff Development:</strong> Training benchmarks for upskilling internal employees.</div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod5_3': {
+                category: 'Module 5: Performance & Objectives',
+                title: 'Deviations & Control Cycle',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">The Control Cycle</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Monitoring performance involves measuring actual results against planned standards to identify gaps.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Deviation:</strong> Any measurable negative or positive difference between planned performance standards and actual results achieved.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Corrective Action:</strong> Immediate remedial steps taken to rectify failing sales, adjust ad channels, or replace unreliable suppliers.
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod6_1': {
+                category: 'Module 6: Sourcing Resources',
+                title: '4 Resource Categories & Intellectual Capital',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Resource Breakdown</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Resources are grouped into 4 distinct categories:
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                            <div class="bg-white p-3 rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">1. Human Resources:</strong> Skilled personnel + <em>Intellectual Capital</em> (staff ideas, trade secrets, brand innovations).
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">2. Financial Resources:</strong> Cash reserves, operating budgets, and credit lines.
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">3. Technological Resources:</strong> Computers, design software, servers, CRM tools.
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">4. Organisational Resources:</strong> Database records, business plans, office space.
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod6_2': {
+                category: 'Module 6: Sourcing Resources',
+                title: 'Resource Alignment & Sourcing',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Optimization Strategy</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                <strong>Resource Alignment</strong> ensures staff are assigned exclusively to roles matching their expertise (e.g., placing graphic designers in creative roles rather than general administration) to eliminate waste and maximize project speed.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            'mod6_3': {
+                category: 'Module 6: Sourcing Resources',
+                title: 'Accounting & Resource Files (LAN / Hard Copy)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Resource Accounting Procedures</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Organizations must record resource availability using standardized checklists. Store records in both <strong>hard copy</strong> (printed binders) and <strong>soft copy</strong> (shared database on Local Area Networks - LAN).
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            'mod7_1': {
+                category: 'Module 7: Strategy & Environment',
+                title: 'Micro, Market & Macro Environments',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Environmental Analysis Layers</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Marketing plans must adapt to 3 distinct environmental spheres:
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Micro Environment:</strong> Internal controllable elements (staff, budget, company culture, executive policy).
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Market / Industry Environment:</strong> Immediate industry forces (competitors, suppliers, consumers, substitute goods).
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Macro Environment (PESTLE):</strong> Uncontrollable external forces (Political, Economic, Social, Technological, Legal, Environmental).
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod7_2': {
+                category: 'Module 7: Strategy & Environment',
+                title: '6 Steps in the Market Analysis Process',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Sequential Methodology</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                standard steps for conducting market analysis:
+                            </p>
+                        </div>
+
+                        <ol class="list-decimal pl-5 space-y-1 text-xs text-slate-700 font-semibold">
+                            <li>Define the marketing problem.</li>
+                            <li>Analyse the current business situation.</li>
+                            <li>Gather problem-specific data (primary & secondary).</li>
+                            <li>Analyse and interpret the collected data.</li>
+                            <li>Develop creative ideas and solve problems.</li>
+                            <li>Design a comprehensive action plan.</li>
+                        </ol>
+                    </div>
+                `
+            },
+            'mod7_3': {
+                category: 'Module 7: Strategy & Environment',
+                title: 'Key Success Factors & Computicket Case Study',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Competitive Advantage</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                <strong>Key Success Factors</strong> are unique skills or assets an enterprise possesses that give it a major edge over rivals.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-xl border border-pink-300 text-xs">
+                            <h5 class="font-bold text-pink-600 mb-1">Computicket Case Study</h5>
+                            <p class="text-slate-600">Computicket's key success factor is its extensive experience and technological network in operating centralized electronic ticketing bookings across South Africa.</p>
+                        </div>
+                    </div>
+                `
+            },
+            'mod8_1': {
+                category: 'Module 8: International Trade',
+                title: 'Generic Competitive Decisions (Porter)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Strategic Positioning</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Three generic strategic choices for competing internationally:
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <div class="p-3 bg-white rounded-xl border border-pink-200"><strong>Cost Leadership:</strong> Becoming the absolute lowest-cost producer in the industry.</div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200"><strong>Differentiation:</strong> Offering unique premium product features that stand out.</div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200"><strong>Focus Strategy:</strong> Dominating a narrow, specialized niche market segment.</div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod8_2': {
+                category: 'Module 8: International Trade',
+                title: 'Survival & Growth Decisions',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Lifecycle Growth Paths</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                High-level strategic directional decisions:
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>Penetrate:</strong> Expand market share aggressively.</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>Maintain:</strong> Protect current market position.</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>Harvest:</strong> Maximize short-term cash flow.</div>
+                            <div class="p-2.5 bg-white rounded-xl border border-pink-200"><strong>Divest:</strong> Sell off unviable business units.</div>
+                        </div>
+                    </div>
+                `
+            },
+            'mod8_3': {
+                category: 'Module 8: International Trade',
+                title: 'Market Attractiveness Matrix & Global Entry Modes',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-500">
+                            <h4 class="font-bold text-pink-700 text-sm mb-1">Global Expansion Strategy</h4>
+                            <p class="text-slate-700 leading-relaxed">
+                                Weighing foreign country market growth against internal company strengths using the <strong>Market Attractiveness Grid</strong>.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Licensing:</strong> Granting a foreign firm rights to produce goods for royalty fees.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Joint Ventures:</strong> Partnering with a local firm to share ownership, risk, and local expertise.
+                            </div>
+                            <div class="p-3 bg-white rounded-xl border border-pink-200">
+                                <strong class="text-pink-600">Foreign Direct Investment (FDI):</strong> Establishing fully owned foreign facilities directly.
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // Modal opening logic
+        function openModal(conceptId) {
+            const data = conceptData[conceptId];
+            if (!data) return;
+
+            document.getElementById('modalCategory').innerText = data.category;
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalBody').innerHTML = data.content;
+            
+            const modal = document.getElementById('detailModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Modal closing logic
+        function closeModal() {
+            const modal = document.getElementById('detailModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking outside box
+        document.getElementById('detailModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close on escape key press
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Global Search Filter function
+        function filterCards() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.concept-card');
+            const modules = document.querySelectorAll('.module-block');
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(input)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            modules.forEach(mod => {
+                const visibleCards = mod.querySelectorAll('.concept-card[style=""]');
+                const modTitle = mod.querySelector('h2').innerText.toLowerCase();
+                if (visibleCards.length > 0 || modTitle.includes(input) || input === '') {
+                    mod.style.display = '';
+                } else {
+                    mod.style.display = 'none';
+                }
+            });
+        }
+
+        // Filter by Module Tab Pills
+        function filterModule(modKey) {
+            const pills = document.querySelectorAll('.mod-pill');
+            pills.forEach(p => {
+                p.classList.remove('bg-pink-600', 'text-white', 'shadow-xs');
+                p.classList.add('bg-pink-100', 'text-pink-700');
+            });
+            event.target.classList.remove('bg-pink-100', 'text-pink-700');
+            event.target.classList.add('bg-pink-600', 'text-white', 'shadow-xs');
+
+            const modules = document.querySelectorAll('.module-block');
+            modules.forEach(mod => {
+                if (modKey === 'all' || mod.getAttribute('data-mod') === modKey) {
+                    mod.style.display = '';
+                } else {
+                    mod.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
